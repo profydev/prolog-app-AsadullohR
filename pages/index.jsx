@@ -33,8 +33,33 @@ const IssuesPage = () => {
     <div>
       <Header>
         {/* eslint-disable-next-line @next/next/no-img-element */}
+
         <img src="/icons/logo-large.svg" alt="Prolog logo" />
-        <a href={Routes.projects}>Dashboard</a>
+        <ul className="nav-bar__items">
+          <li className="nav-bar__item">
+            <a className="nav-bar__item--link" href={Routes.home}>
+              Home
+            </a>
+          </li>
+          <li className="nav-bar__item">
+            <a className="nav-bar__item--link" href={Routes.products}>
+              Products
+            </a>
+          </li>
+          <li className="nav-bar__item">
+            <a className="nav-bar__item--link" href={Routes.documentation}>
+              Documentation
+            </a>
+          </li>
+          <li className="nav-bar__item">
+            <a className="nav-bar__item--link" href={Routes.pricing}>
+              Pricing
+            </a>
+          </li>
+        </ul>
+        <a className="nav-bar__btn" href={Routes.projects}>
+          Open Dashboard
+        </a>
       </Header>
       <ContactButton
         onClick={() =>
