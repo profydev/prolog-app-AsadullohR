@@ -38,6 +38,5 @@ export const GlobalStyle = createGlobalStyle<{ theme: Theme }>`
     font-size: ${textFont("md", "medium")}
     text-align: center;
     vertical-align: middle;
-
   }
 `;

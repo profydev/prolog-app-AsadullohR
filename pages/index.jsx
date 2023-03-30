@@ -1,5 +1,7 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { Routes } from "@config/routes";
+import ContactModal from "./contactModal";
 
 const Header = styled.header`
   width: 100%;
@@ -29,6 +31,18 @@ const ContactButton = styled.button`
 `;
 
 const IssuesPage = () => {
+  const [show, setShow] = useState(false);
+
+  const handleModalClick = () => {
+    setShow(true);
+  };
+  const handleCloseContact = () => {
+    setShow(false);
+  };
+  const handleOpenContact = () => {
+    setShow(false);
+  };
+
   return (
     <div>
       <Header>
@@ -61,13 +75,13 @@ const IssuesPage = () => {
           Open Dashboard
         </a>
       </Header>
-      <ContactButton
-        onClick={() =>
-          alert(
-            "Implement this in Challenge 2 - Modal:\n\nhttps://profy.dev/rjs-challenge-modal"
-          )
-        }
-      >
+      <ContactModal
+        show={show}
+        handleCloseContact={handleCloseContact}
+        handleOpenContact={handleOpenContact}
+      />
+      ;
+      <ContactButton onClick={handleModalClick}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/icons/message.svg" alt="Contact" />
       </ContactButton>

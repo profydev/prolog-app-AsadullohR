@@ -9,6 +9,7 @@ import { NavigationProvider } from "@features/layout";
 import { GlobalStyle } from "@styles/global-style";
 import { theme } from "@styles/theme";
 import { queryClient } from "@api/query-client";
+import "../styles/modal.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
